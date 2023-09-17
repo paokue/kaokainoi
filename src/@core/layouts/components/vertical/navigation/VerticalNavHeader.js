@@ -66,8 +66,9 @@ const VerticalNavHeader = props => {
       return 6
     }
   }
-  const MenuLockedIcon = () => userMenuLockedIcon || <Icon icon='tabler:circle-dot' />
-  const MenuUnlockedIcon = () => userMenuUnlockedIcon || <Icon icon='tabler:circle' />
+  const MenuLockedIcon = () => userMenuLockedIcon || <Icon icon='mdi:arrow-back' />
+  const MenuUnlockedIcon = () => userMenuUnlockedIcon || <Icon icon='basil:cancel-solid' />
+  // <iconify-icon icon="cil:locomotive"></iconify-icon>
 
   return (
     <MenuHeaderWrapper className='nav-header' sx={{ pl: menuHeaderPaddingLeft() }}>

@@ -1,16 +1,7 @@
-// ** React Imports
 import { createContext, useEffect, useState } from 'react'
-
-// ** Next Import
 import { useRouter } from 'next/router'
-
-// ** Axios
 import axios from 'axios'
-
-// ** Config
 import authConfig from 'src/configs/auth'
-
-// ** Defaults
 const defaultProvider = {
   user: null,
   loading: true,
@@ -22,11 +13,8 @@ const defaultProvider = {
 const AuthContext = createContext(defaultProvider)
 
 const AuthProvider = ({ children }) => {
-  // ** States
   const [user, setUser] = useState(defaultProvider.user)
   const [loading, setLoading] = useState(defaultProvider.loading)
-
-  // ** Hooks
   const router = useRouter()
   useEffect(() => {
     const initAuth = async () => {
