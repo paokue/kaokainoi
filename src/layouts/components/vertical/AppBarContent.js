@@ -4,9 +4,11 @@ import IconButton from '@mui/material/IconButton'
 
 // ** Icon Imports
 import Icon from 'src/@core/components/icon'
+import LanguageDropdown from 'src/@core/layouts/components/shared-components/LanguageDropdown'
 
 // ** Components
 import ModeToggler from 'src/@core/layouts/components/shared-components/ModeToggler'
+import NotificationDropdown from 'src/@core/layouts/components/shared-components/NotificationDropdown'
 import UserDropdown from 'src/@core/layouts/components/shared-components/UserDropdown'
 
 const AppBarContent = props => {
@@ -24,6 +26,8 @@ const AppBarContent = props => {
       </Box>
       <Box className='actions-right' sx={{ display: 'flex', alignItems: 'center' }}>
         <ModeToggler settings={settings} saveSettings={saveSettings} />
+        <LanguageDropdown settings={settings} />
+        <NotificationDropdown settings={settings} notifications={10} />
         <UserDropdown settings={settings} />
       </Box>
     </Box>

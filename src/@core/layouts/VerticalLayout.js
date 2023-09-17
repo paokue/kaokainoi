@@ -16,7 +16,6 @@ import themeConfig from 'src/configs/themeConfig'
 import AppBar from './components/vertical/appBar'
 import Customizer from 'src/@core/components/customizer'
 import Navigation from './components/vertical/navigation'
-import Footer from './components/shared-components/footer'
 import ScrollToTop from 'src/@core/components/scroll-to-top'
 
 const VerticalLayoutWrapper = styled('div')({
@@ -63,7 +62,6 @@ const VerticalLayout = props => {
   return (
     <>
       <VerticalLayoutWrapper className='layout-wrapper'>
-        {/* Navigation Menu */}
         {navHidden && !(navHidden && settings.lastLayout === 'horizontal') ? null : (
           <Navigation
             navWidth={navWidth}
@@ -112,9 +110,6 @@ const VerticalLayout = props => {
           >
             {children}
           </ContentWrapper>
-
-          {/* Footer Component */}
-          <Footer footerStyles={footerProps?.sx} footerContent={footerProps?.content} {...props} />
         </MainContentWrapper>
       </VerticalLayoutWrapper>
 

@@ -167,22 +167,6 @@ const NotificationDropdown = props => {
             <CustomChip skin='light' size='small' color='primary' label={`${notifications.length} New`} />
           </Box>
         </MenuItem>
-        <ScrollWrapper hidden={hidden}>
-          {notifications.map((notification, index) => (
-            <MenuItem key={index} disableRipple disableTouchRipple onClick={handleDropdownClose}>
-              <Box sx={{ width: '100%', display: 'flex', alignItems: 'center' }}>
-                <RenderAvatar notification={notification} />
-                <Box sx={{ mr: 4, ml: 2.5, flex: '1 1', display: 'flex', overflow: 'hidden', flexDirection: 'column' }}>
-                  <MenuItemTitle>{notification.title}</MenuItemTitle>
-                  <MenuItemSubtitle variant='body2'>{notification.subtitle}</MenuItemSubtitle>
-                </Box>
-                <Typography variant='body2' sx={{ color: 'text.disabled' }}>
-                  {notification.meta}
-                </Typography>
-              </Box>
-            </MenuItem>
-          ))}
-        </ScrollWrapper>
         <MenuItem
           disableRipple
           disableTouchRipple

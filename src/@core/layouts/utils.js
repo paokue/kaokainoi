@@ -1,10 +1,3 @@
-/**
- * Check for URL queries as well for matching
- * Current URL & Item Path
- *
- * @param item
- * @param activeItem
- */
 export const handleURLQueries = (router, path) => {
   if (Object.keys(router.query).length && path) {
     const arr = Object.keys(router.query)
@@ -14,14 +7,6 @@ export const handleURLQueries = (router, path) => {
 
   return false
 }
-
-/**
- * Check if the given item has the given url
- * in one of its children
- *
- * @param item
- * @param currentURL
- */
 export const hasActiveChild = (item, currentURL) => {
   const { children } = item
   if (!children) {
@@ -49,14 +34,6 @@ export const hasActiveChild = (item, currentURL) => {
   return false
 }
 
-/**
- * Check if this is a children
- * of the given item
- *
- * @param children
- * @param openGroup
- * @param currentActiveGroup
- */
 export const removeChildren = (children, openGroup, currentActiveGroup) => {
   children.forEach(child => {
     if (!currentActiveGroup.includes(child.title)) {
